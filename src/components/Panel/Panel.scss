@@ -1,0 +1,128 @@
+@import '../../App.scss';
+
+.w-90 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mt-130 {
+    margin-top: 130px;
+}
+
+.panel-show {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 170px);
+
+    .list-portfolio {
+        background-color: white;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        border-radius: 6px 0 0 6px;
+        overflow: hidden;
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+
+            a {
+                color: rgb(68, 68, 68);
+                margin-left: 10px;
+                font-size: 15px;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: rgb(24, 158, 255);
+            }
+
+            &:hover a {
+                color: white;
+            }
+
+            &:hover svg {
+                color: white;
+            }
+        }
+    }
+
+    .slide {
+        grid-column: 2 / 5;
+        grid-row: 1 / 3;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .highlight {
+
+        .item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 0 4px 4px 0;
+            margin-top: 5px;
+            box-shadow: 1px 4px 7px #CCE;
+            height: 168px;
+            font-weight: 500;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: white;
+
+                transform: rotate(45deg);
+                border-radius: 50%;
+                color: tomato;
+
+                @include display-flex-center();
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+            }
+
+            &:hover img {
+                transform: scale(1.2)
+            }
+        }
+    }
+
+    .col-item {
+        grid-column: 5 / 6;
+        grid-row: 1 / 3;
+        overflow: hidden;
+        border-radius: 0 0px 4px 0;
+
+        .item {
+            position: relative;
+
+            &::after {
+                content: "HOT";
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}

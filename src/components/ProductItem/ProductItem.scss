@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+.product-item {
+    padding: 15px 15px 0 15px;
+    width: 20%;
+    overflow: hidden;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+        z-index: 2;
+        box-shadow: 0px 0px 20px #ccc;
+    }
+
+    img {
+        width: 90%;
+        height: 70%;
+        margin: 0 auto;
+    }
+
+    .name {}
+
+    .price {
+        font-size: 12px;
+        color: tomato;
+    }
+
+    .feature {
+        .btn {
+            width: 35px;
+            height: 35px;
+            background-color: #199eff;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            transform: translateY(15px);
+            opacity: 0;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                transform: translate(-50%, -50%)
+            }
+        }
+    }
+
+    &:hover .description {
+        display: none;
+    }
+
+    &:hover .feature .add-cart {
+        opacity: 1;
+        animation: showBtn 0.3s forwards;
+    }
+
+    &:hover .feature .view-detail {
+        opacity: 1;
+        animation: showBtn 0.3s forwards;
+        animation-delay: 0.1s;
+    }
+}
+
+@keyframes showBtn {
+    0% {
+        transform: translateY(15px)
+    }
+
+    20% {
+        transform: translateY(10px)
+    }
+
+    40% {
+        transform: translateY(5px)
+    }
+
+    60% {
+        transform: translateY(0px)
+    }
+
+    80% {
+        transform: translateY(3px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}

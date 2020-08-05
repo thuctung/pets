@@ -1,0 +1,33 @@
+<HeaderContainer>
+    <Header>
+        <Search/> : propsChildren of Header
+    </Header>
+</HeaderContainer>
+
+<PanelContainer>
+    <Panel>
+        <Portfolio/>
+        <Side/>
+        <ListHighlight>
+            <Highlight/>
+        </ListHighlight>
+                <ListHighlight>
+            <Highlight/>
+        </ListHighlight>
+    </Panel>
+</PanelContainer>
+
+<Route>
+    <HomeContainer>
+        <HomePage>
+            <ProductsHighlight>
+                <Product/>
+            </ProductsHighlight>
+            <ProductsHighlight>
+                <Product/>
+            </ProductsHighlight>
+        </HomePage>
+    </HomeContainer>
+</Route>
+
+<Footer/>
