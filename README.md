@@ -9,5 +9,5 @@
  - CRUD product
  - Search product
  - Cart
- - By product
+ - Buy product
  - Review product
